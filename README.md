@@ -18,3 +18,15 @@ python
 some read text
 >>> quit()
 ```
+
+
+```bash
+pip install openpyxl
+
+```
+
+```bash
+python
+
+>>>import openpyxl
+```
