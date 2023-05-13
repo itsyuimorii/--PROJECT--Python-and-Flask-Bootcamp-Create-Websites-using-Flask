@@ -70,28 +70,43 @@ The code you provided is for a Python script called "one.py." Let's break down t
 ```python
 #one.py
 
+# Define a function named 'func'
 def func():
-    print("func() in one.py")
+    print("func() in one.py is being called")
 
+# Print a message indicating the top level of the script
 print("Top level in one.py")
 
+# Check if the script is being run directly
 if __name__ == "__main__":
+    # If it is being run directly, print a corresponding message
     print('one.py is being run directly')
 else:
+    # If it is being imported as a module, print a corresponding message
     print('one.py is being imported')
+
 ```
 
 ```python
 #two.py
-import one 
+
+# Import the module 'one'
+import one
+
+# Print a message indicating the top level of the script
 print("Top level in two.py")
 
+# Call the function 'func' from the 'one' module
 one.func()
 
+# Check if the script is being run directly
 if __name__ == "__main__":
+    # If it is being run directly, print a corresponding message
     print("Two.py is being run directly")
 else:
-    print("Two.py is being imported") 
+    # If it is being imported as a module, print a corresponding message
+    print("Two.py is being imported")
+
 ```
 
 Based on the updated code you provided for `one.py` and `two.py`, let's explain the execution and the resulting output:
@@ -111,7 +126,7 @@ When you execute `python one.py`, the output begins with the line `Top level in 
 Top level in one.py
 one.py is being imported
 Top level in two.py
-func() in one.py
+func() in one.py is being called
 Two.py is being run directly
 ```
 
