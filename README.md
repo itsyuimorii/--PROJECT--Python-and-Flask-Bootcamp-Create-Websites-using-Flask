@@ -91,17 +91,23 @@ one.func()
 if __name__ == "__main__":
     print("Two.py is being run directly")
 else:
-    print("Two.py is being imported")
+    print("Two.py is being imported") 
 ```
 
-```bash
-#output:
-(base) itsyuimoriispace@itsyuimoriis-MacBook-Pro name_and_main % pyth
-on one.py
+Based on the updated code you provided for `one.py` and `two.py`, let's explain the execution and the resulting output:
+
+**For `one.py`:**
+
+```
 Top level in one.py
 one.py is being run directly
-(base) itsyuimoriispace@itsyuimoriis-MacBook-Pro name_and_main % pyth
-on two.py
+```
+
+When you execute `python one.py`, the output begins with the line `Top level in one.py` because it is not inside any function or conditional statement. Then, since `__name__` is set to `"__main__"` when the script is run directly, the code block inside the `if __name__ == "__main__":` condition is executed, which prints the message "one.py is being run directly".
+
+**For `two.py`:**
+
+```
 Top level in one.py
 one.py is being imported
 Top level in two.py
@@ -109,12 +115,10 @@ func() in one.py
 Two.py is being run directly
 ```
 
-In this script:
+When you execute `python two.py`, it first imports `one.py` using the `import` statement. As a result, the top-level code in `one.py` is executed, printing `Top level in one.py`. Then, since `one.py` is being imported as a module, the `if __name__ == "__main__":` condition in `one.py` evaluates to `False`, and the code block inside the `else` statement is executed, printing the message "one.py is being imported".
 
-1. The `func()` function is defined. It simply prints the message "func() in one.py". This function can be called from other parts of the script or from other scripts if this script is imported as a module.
-2. The line `print("Top level in one.py")` is outside of any function or conditional statement. This line will be executed whenever the script is run, regardless of whether it is run directly or imported as a module.
-3. The `if __name__ == "__main__":` condition checks if the script is being run directly as the main program or if it is being imported as a module. If the condition is true, the code block inside the if statement will be executed. Otherwise, the code block inside the else statement will be executed.
-   - If the script is being run directly as the main program, it will print the message "one.py is being run directly."
-   - If the script is being imported as a module by another script, it will print the message "one.py is being imported."
+After that, the execution moves to `two.py`, where it prints `Top level in two.py` to indicate the execution of top-level code in `two.py`. Then, `one.func()` is called, which invokes the `func()` function from `one.py`. This results in the message "func() in one.py" being printed.
 
-This construct allows you to distinguish between running a script directly or importing it as a module. It provides a way to include code that should only be executed when the script is run directly, while not executing that code when the script is imported as a module.
+Finally, since `two.py` is being run directly as the main program, the `if __name__ == "__main__":` condition in `two.py` evaluates to `True`, and it prints the message "Two.py is being run directly".
+
+Overall, the output you observed is the result of executing both `one.py` and `two.py`, with `one.py` being imported as a module by `two.py`.
