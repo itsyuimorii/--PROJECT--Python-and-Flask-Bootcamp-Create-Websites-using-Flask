@@ -16,3 +16,22 @@ To list out all the environment
 `conda env list`
 
  
+
+
+This was useful to me when I encountered a similar error in Windows:
+
+To install the virtual environment:
+
+pip install virtualenv
+To create a virtual environment: pip install
+
+virtualenv flask
+To navigate to the script and activate virtualenv: virtualenv flask
+
+activate
+To install the flask: python -m
+
+python -m pip install flask
+Check if flask is installed: python -m pip
+
+python -m pip list
