@@ -14,5 +14,5 @@
 
 To list out all the environment
 `conda env list`
- 
+
  
