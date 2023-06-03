@@ -1,11 +1,16 @@
 # Set up your imports here!
 # import ...
+from flask import Flask
+from flask import request
 
+app = Flask(__name__)
 
 @app.route('') # Fill this in!
 def index():
     # Welcome Page
+    return "<h1>Go to puppy_name/name to see the result!</h1>"
     # Create a generic welcome page.
+
     pass
 
 @app.route('') # Fill this in!
