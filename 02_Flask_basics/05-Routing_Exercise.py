@@ -25,7 +25,7 @@ def puppylatin(name):
         puppylatin = name + 'y'
     # HINT: Use indexing and concatenation of strings
     # For Example: "hello"+" world" --> "hello world"
-    return “<h1>Hi {}! Your puppylatin name is {}</h1>”.format(name, pupname)
+    return "<h1>Hi {}! Your puppylatin name is {}</h1>".format(name, pupname)
 
 if __name__ == '__main__':
     # Fill me in!
