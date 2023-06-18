@@ -24,6 +24,5 @@ def index():
         return redirect(url_for('index'))
     return render_template('02-home.html', form=form)
 
-
 if __name__ == '__main__':
     app.run(debug=True)
