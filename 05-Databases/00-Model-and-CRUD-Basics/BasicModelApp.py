@@ -16,8 +16,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 #####################################
-####################################
-###################################
 
 # Let's create our first model!
 # We inherit from db.Model class
@@ -50,3 +48,4 @@ class Puppy(db.Model):
     def __repr__(self):
         # This is the string representation of a puppy in the model
         return f"Puppy {self.name} is {self.age} years old."
+
