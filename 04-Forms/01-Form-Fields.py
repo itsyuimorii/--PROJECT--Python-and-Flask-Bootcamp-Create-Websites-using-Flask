@@ -28,8 +28,6 @@ class InfoForm(FlaskForm):
     feedback = TextAreaField()
     submit = SubmitField('Submit')
 
-
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
 
@@ -47,7 +45,6 @@ def index():
 
         return redirect(url_for("thankyou"))
 
-
     return render_template('01-home.html', form=form)
 
 
@@ -55,7 +52,6 @@ def index():
 def thankyou():
 
     return render_template('01-thankyou.html')
-
 
 if __name__ == '__main__':
     app.run(debug=True)
