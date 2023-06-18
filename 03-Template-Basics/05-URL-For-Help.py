@@ -10,7 +10,5 @@ def index():
 def pup_name(name):
     return render_template('05-Puppy.html',name=name)
 
-
-
 if __name__ == '__main__':
     app.run(debug=True)

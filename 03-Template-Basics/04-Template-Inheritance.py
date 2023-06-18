@@ -11,6 +11,5 @@ def pup_name(name):
     return render_template('04-Puppy.html',name=name)
 
 
-
 if __name__ == '__main__':
     app.run(debug=True)
