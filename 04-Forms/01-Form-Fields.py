@@ -50,7 +50,6 @@ def index():
 
 @app.route('/thankyou')
 def thankyou():
-
     return render_template('01-thankyou.html')
 
 if __name__ == '__main__':
