@@ -1,8 +1,8 @@
 from flask import Flask, render_template, session, redirect, url_for, session
 from flask_wtf import FlaskForm
-from wtforms import (StringField, BooleanField, DateTimeField,
+from wtforms import (StringField, SubmitField, BooleanField, DateTimeField,
                      RadioField,SelectField,TextField,
-                     TextAreaField,SubmitField)
+                     TextAreaField)
 from wtforms.validators import DataRequired
 
 
