@@ -22,16 +22,16 @@ class InfoForm(FlaskForm):
 def index():
     # Set the breed to a boolean False.
     # So we can use it in an if statement in the html.
-    breed = False
+    breed_pass = False
     # Create instance of the form.
     form = InfoForm()
     # If the form is valid on submission (we'll talk about validation next)
     if form.validate_on_submit():
         # Grab the data from the breed on the form.
-        breed = form.breed.data
+        breed_pass = form.breed.data
         # Reset the form's breed data to be False
         form.breed.data = ''
-    return render_template('00-home.html', form=form, breed=breed)
+    return render_template('00-home.html', form=form, breed=breed_pass)
 
 
 if __name__ == '__main__':
