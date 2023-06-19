@@ -1,4 +1,6 @@
 # data_science_meetup_blog/__init__.py
+"""_summary_: The __init__.py file is the first file that is run when the app is started. It contains the app factory function that creates the app, and the app's configuration settings.
+"""
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -14,8 +16,9 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///'+os.path.join(basedir,'data.sqlite')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-
+# Connects the app to the database
 db = SQLAlchemy(app)
+# Connects the app to the migration folder
 Migrate(app,db)
 
 '''Login Configs'''
