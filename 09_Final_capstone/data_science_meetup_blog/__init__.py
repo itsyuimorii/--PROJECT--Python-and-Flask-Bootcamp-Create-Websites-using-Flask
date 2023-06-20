@@ -10,6 +10,8 @@ from flask_login import LoginManager
 
 app = Flask(__name__)
 
+app.config['SECRET_KEY'] = 'mysecretkey'
+
  
 '''Database Setup'''
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -23,21 +25,26 @@ Migrate(app,db)
 
 '''Login Configs'''
 # Create a login manager object
-login_manager = LoginManager()
-# Connects the app to the login manager
-login_manager.init_app(app)
-# Sets the login view for the app
-login_manager.login_view = 'users.login'
  
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = 'users.login'
 
 
 '''Blueprints'''
 from data_science_meetup_blog.core.views import core
 from data_science_meetup_blog.users.views import users
 from data_science_meetup_blog.error_pages.handlers import error_pages
-
+from data_science_meetup_blog.blog_posts.views import blog_posts
+ 
 app.register_blueprint(error_pages)
 app.register_blueprint(core)
+
+ 
+
+ 
+app.register_blueprint(blog_posts)
+app.register_blueprint(error_pages)
 
 
 

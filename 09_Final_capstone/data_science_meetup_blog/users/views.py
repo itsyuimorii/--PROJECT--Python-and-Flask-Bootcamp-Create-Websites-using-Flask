@@ -80,8 +80,6 @@ def account():
     profile_image = url_for('static', filename = 'profile_pics/' +current_user.profile_image)
     return render_template('account.html', profile_image=profile_image, form=form)
 
-
-
 # user`s list of Blog posts
 @users.route("/<username>")
 def user_posts(username):
