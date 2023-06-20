@@ -28,12 +28,15 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 # Sets the login view for the app
 login_manager.login_view = 'users.login'
+ 
+
 
 '''Blueprints'''
 from data_science_meetup_blog.core.views import core
+from data_science_meetup_blog.users.views import users
 from data_science_meetup_blog.error_pages.handlers import error_pages
 
-app. register_blueprint(error_pages)
+app.register_blueprint(error_pages)
 app.register_blueprint(core)
 
 
