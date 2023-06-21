@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to the Data Science Meetup!</h1>
+    <p class="lead">We are excited to have you join us for a gathering of data science enthusiasts.</p>
+    <hr class="my-4">
+    <p>During this meetup, we will explore various topics related to data science, including <a>machine learning, artificial intelligence, big data analytics, and more. 
+     Whether you are a beginner or an experienced professional, this meetup offers a great opportunity to network, learn from experts, and share your knowledge with others.</p>
+    <p>Join us for insightful talks, interactive workshops, and engaging discussions. Expand your understanding of data science and stay up-to-date with the latest industry trends. 
+ Don't miss out on this exciting event! Reserve your spot today and get ready to immerse yourself in the world of data science.</p>
+ <a class="btn btn-primary btn-lg" href="{{ url_for('users.register') }}" role="button">Register Now</a>
+
+  </div>
+{% endblock %}
