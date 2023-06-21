@@ -1,6 +1,6 @@
 # core/views.py
 
-from flask import render_template,request,Blueprint
+from flask import render_template,Blueprint
 
 core = Blueprint('core',__name__)
 
@@ -12,3 +12,4 @@ def index():
 @core.route('/info')
 def info():
     return render_template('info.html')
+
