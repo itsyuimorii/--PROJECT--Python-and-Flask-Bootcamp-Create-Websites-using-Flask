@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-  <div class="jumbotron">
-    <h1 class="display-4">Welcome to the Data Science Meetup!</h1>
-    <p class="lead">We are excited to have you join us for a gathering of data science enthusiasts.</p>
-    <hr class="my-4">
-    <p>During this meetup, we will explore various topics related to data science, including <a>machine learning, artificial intelligence, big data analytics, and more. 
-     Whether you are a beginner or an experienced professional, this meetup offers a great opportunity to network, learn from experts, and share your knowledge with others.</p>
-    <p>Join us for insightful talks, interactive workshops, and engaging discussions. Expand your understanding of data science and stay up-to-date with the latest industry trends. 
- Don't miss out on this exciting event! Reserve your spot today and get ready to immerse yourself in the world of data science.</p>
- <a class="btn btn-primary btn-lg" href="{{ url_for('users.register') }}" role="button">Register Now</a>
 
+  <div class="jumbotron">
+    <h1 class="display-4">Hacker's Hideout｜Where Ideas Thrive </h1>
+    <p class="lead">「ハッカーの隠れ家」への参加を歓迎します。
+      この場所は、創造的なアイデアに興味を持つ方々を対象とした秘密の場所です。</p>
+    <p class="lead">  
+    </p>
+    <hr class="my-4">
+    <p>
+      今回のイベントでは、エンジニアリング、デザイン、革新的なアイデアに関連するさまざまなトピックを探求します。初心者であろうと経験豊富なプロフェッショナルであろうと、このイベントは人脈を広げ、専門家から学び、知識を他人と共有する絶好の機会を提供します。</p>
+      
+      <p>洞察力のある講演、インタラクティブなワークショップ、魅力的なディスカッションに参加しましょう。アイデアが蓄積する場所で、他の開発者と共に集まりましょう。この刺激的なイベントを見逃さないでください！今すぐ参加登録を行い、場所を確保しましょう。</p>
+      <br>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('users.register') }}" role="button" >今すぐ登録</a>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('users.register') }}" role="button" style="    background-color: rgb(0, 255, 26); color: black;">Register Now</a>
   </div>
 {% endblock %}
