@@ -38,7 +38,6 @@ from data_science_meetup_blog.error_pages.handlers import error_pages
 from data_science_meetup_blog.blog_posts.views import blog_posts
 
 app.register_blueprint(blog_posts)
-
 app.register_blueprint(core)
 app.register_blueprint(users)
 app.register_blueprint(error_pages)
