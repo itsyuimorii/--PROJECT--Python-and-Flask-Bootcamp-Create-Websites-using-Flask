@@ -17,10 +17,13 @@
     <a class="btn btn-primary btn-lg" href="{{ url_for('users.register') }}" role="button" style="    background-color: rgb(0, 255, 26); color: black;">Register Now</a>
   </div>
 
+   
+  
   <div class="container">
 
     {# Go through each blog post #}
     {% for post in blog_posts.itemss %}
+
     <div class="card" >
 
       <div class="card-body">
@@ -48,7 +51,8 @@
           {% endif %}
       {% endfor %}
     </nav>
-</div>
+
+
 
 
 {% endblock %}
