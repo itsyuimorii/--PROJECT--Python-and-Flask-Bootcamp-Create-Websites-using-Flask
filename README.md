@@ -4,7 +4,7 @@
 
 
 
-
+## 🏕️ Set_up
 
 `conda create -n myenv numpy`: This command creates a virtual environment called "myenv" and installs the NumPy library, a Python library for number crunching.
 
