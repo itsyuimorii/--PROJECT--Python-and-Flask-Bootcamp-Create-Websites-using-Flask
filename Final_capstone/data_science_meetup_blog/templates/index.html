@@ -25,16 +25,15 @@
   {# Go through each blog post #}
   {% for post in blog_posts.items %}
   <div class="card">
-    <div class="card-body">
-      <h2><a class="card-title" href="  {{ url_for('blog_posts.blog_post', blog_post_id=post.id) }}">{{ post.title
-          }}</a></h2>
-      <a href="{{ url_for('users.user_posts', username=post.author.username) }}">Written By: {{ post.author.username
-        }}</a>
-      <p>Published on: {{ post.date.strftime('%Y-%m-%d') }}</p>
-      <p class="card-text">{{ post.text[:100] }}...</p>
+    <div class="card-body" style="color: black;">
+      <h2><a class="card-title" href="{{ url_for('blog_posts.blog_post', blog_post_id=post.id) }}">{{ post.title }}</a></h2>
+      <a class="card-text" href="{{ url_for('users.user_posts', username=post.author.username) }}">Written By: {{ post.author.username }}</a>
+      <p class="card-text">Published on: {{ post.date.strftime('%Y-%m-%d') }}</p>
+      <p class="card-text" style="color: black;">{{ post.text[:100] }}...</p>
       <a href="{{ url_for('blog_posts.blog_post', blog_post_id=post.id) }}" class="btn btn-primary">Read Blog Post</a>
     </div>
   </div>
+  <br>
   {% endfor %}
   <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-center">
@@ -43,15 +42,11 @@
       <li class="page-item disabled">
         <a class="page-link" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a>
       </li>
-      </li>
       {% else %}
-      <li class="page-item"><a class="page-link" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a>
-      </li>
+      <li class="page-item"><a class="page-link" href="{{ url_for('core.index', page=page_num) }}">{{ page_num }}</a></li>
       {% endif %}
       {% endfor %}
+    </ul>
   </nav>
-
-
-
-
-  {% endblock %}
+</div>
+{% endblock %}

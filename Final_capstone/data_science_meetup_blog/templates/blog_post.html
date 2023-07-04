@@ -2,8 +2,8 @@
 {% block content %}
 <div class="jumbotron">
   <h1>{{ post.title }}</h1>
-  <h2>Written by: {{post.author.username}}</h2>
-  <h3>Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
+  <h2 class="card-text">Written by: {{post.author.username}}</h2>
+  <h3 class="card-text">Published: {{ post.date.strftime('%B %d, %Y') }}</h3>
   <p>{{post.text}}</p>
    {% if post.author == current_user %}
      <div>
@@ -12,9 +12,6 @@
      </div>
    {% endif %}
 </div>
-
-
-
 
   <!-- Modal for Pop Up-->
   {# https://getbootstrap.com/docs/4.1/components/modal/ #}
