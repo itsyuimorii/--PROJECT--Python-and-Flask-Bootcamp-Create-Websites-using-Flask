@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<br><br>
 <div class="jumbotron">
   <h1 class="display-4">Hacker's Hideout｜Where Ideas Thrive </h1>
   <p class="lead">「ハッカーの隠れ家」への参加を歓迎します。
@@ -20,7 +20,9 @@
   <a class="btn btn-primary btn-lg" href="{{ url_for('users.register') }}" role="button"
     style="    background-color: rgb(0, 255, 26); color: black;">Register Now</a>
 </div>
+ 
 
+<br><br><br><br><br><br>
 <div class="container">
   {# Go through each blog post #}
   {% for post in blog_posts.items %}
